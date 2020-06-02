@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang = "en" dir = "ltr">
+  <head>
+    <meta charset = "utf-8">
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <style media="screen">
+      body
+      {
+        font-family: futura, sans-serif;
+        background-color: #badfdb;
+      }
+      h1
+      {
+        padding-bottom: 30px;
+      }
+      button
+      {
+        background-color: #cfb495;
+        padding: 10px;
+        border: none;
+      }
+      button:focus
+      {
+        outline-style: none;
+      }
+      button:hover
+      {
+        background-color: #758184;
+        cursor: pointer;
+      }
+
+    </style>
+
+    <h1 align = "center">Registration Form</h1>
+    <form class = "registration" action = "assignment_2.html" method = "post">
+      <table>
+        <tr>
+          <td>First Name</td>
+          <td><input type = "text" name = "fname" value = ""></td>
+        </tr>
+        <tr>
+          <td>Last Name</td>
+          <td><input type = "text" name = "lname" value = ""></td>
+        </tr>
+        <tr>
+          <td>Date Of Birth</td>
+          <td><input type = "date" name = "date" value = ""></td>
+        </tr>
+        <tr>
+          <td>e-mail</td>
+          <td><input type = "email" name = "email" value = ""></td>
+        </tr>
+        <tr>
+          <td>Mobile Number</td>
+          <td><input type = "number" name = "mobile" value = ""></td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td><textarea name = "address" rows = "8" cols = "80"></textarea></td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td><input type="radio" name = "gender" value = "gender"> male <input type="radio" name = "gender" value = "gender"> female <input type="radio" name = "gender" value = "gender"> transgender</td>
+        </tr>
+        <tr>
+          <td>Department</td>
+          <td><input type = "text" name = "department" value = ""></td>
+        </tr>
+      </table>
+      <br>
+      <button type = "submit" name = "submit" height = 20px width = 50px>Submit</button>
+      <button type = "reset" name = "submit" height = 20px width = 50px>Reset</button>
+    </form>
+  </body>
+</html>

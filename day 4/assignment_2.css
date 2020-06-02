@@ -1,0 +1,40 @@
+body
+{
+  margin: 20px;
+  background-color: #0000;
+  font-family: futura, sans-serif;
+  font-size: 15px;
+  background-color: #badfdb;
+}
+
+.navbar
+{
+  padding: 20px 0 20px 0;
+  display: inline-block;
+  width: auto;
+  height: 570px;
+  background-color: #cfb495;
+}
+
+.navbar ul
+{
+  padding: 0;
+}
+
+.navelements li
+{
+  list-style: none;
+  padding: 35px 55px;
+  letter-spacing: 1px;
+}
+
+li a
+{
+  text-decoration: none;
+  color: black;
+}
+
+li a:hover
+{
+  color: #5d5b6a;
+}

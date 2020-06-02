@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "en" dir = "ltr">
+  <head>
+    <meta charset = "utf-8">
+    <title>Login</title>
+  </head>
+  <body>
+    <style media="screen">
+      body
+      {
+        font-family: futura, sans-serif;
+        background-color: #badfdb;
+      }
+      h1
+      {
+        padding-bottom: 30px;
+      }
+      button
+      {
+        background-color: #cfb495;
+        padding: 10px;
+        border: none;
+      }
+      button:focus
+      {
+        outline-style: none;
+      }
+      button:hover
+      {
+        background-color: #758184;
+        cursor: pointer;
+      }
+
+    </style>
+
+    <h1 align = "center">Login Form</h1>
+    <form class = "login" action = "assignment_2.html" method = "post">
+      <table>
+        <tr>
+          <td>Username</td>
+          <td><input type = "text" name = "uname" value = ""></td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td><input type = "password" name = "password" value = ""></td>
+        </tr>
+      </table>
+      <br>
+      <button type = "submit" name = "submit" height = 20px width = 50px>Submit</button>
+      <button type = "reset" name = "cancel" height = 20px width = 50px>Cancel</button>
+    </form>
+  </body>
+</html>

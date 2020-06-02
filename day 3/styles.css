@@ -1,0 +1,22 @@
+body
+{
+  background-color: #D6CFCF;
+  font-family: futura, sans-serif;
+  margin: 50px;
+  text-align: center;
+}
+.content
+{
+  width: 80%;
+  height: auto;
+  display: inline-block;
+  text-align: left;
+}
+.two
+{
+  text-transform: uppercase;
+}
+.three
+{
+  font-style: italic;
+}
