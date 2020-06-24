@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Feedback</title>
+    <script type="text/javascript" src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/js/jquery.min.js"></script>
+    <link rel="StyleSheet" href="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/css/bootstrap.min.css" />
+    <script type="text/javascript" src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnLogin").click(function () {
+                var val1 = $("#txtUsername").val();
+                var val2 = $("#txtdob").val();
+                var val3 = $("#txtphnno").val();
+                var val4 = $("#FB").val();
+
+                if (val1 == '' && val2 == '' && val4 == '') {
+                    $('input[type="text"]').css("border", "2px solid red");
+                    $('input[type="number"]').css("border", "2px solid red");
+                    $('#FB').css("border", "2px solid red");
+                    window.alert('fill the Name,DOB,Phone Number,Feedback');
+                }
+                else {
+                    if (/^[A-Za-z]{6,20}$/.test(val1) && /^[0-9]{2}[/][0-9]{2}[/][0-9]{4}$/.test(val2)&& /^(?:(?:\+|0{0,2})91(\s*[\ -]\s*)?|[0]?)?[789]\d{9}|(\d[ -]?){10}\d$/) {
+
+                        window.alert('Validated');
+                    }
+                    else {
+                        $('input[type="text"]').css("border", "2px solid green");
+                        $('input[type="number"]').css("border", "2px solid green");
+                        $('#FB').css("border", "2px solid green");
+                        window.alert("Not Validated")
+                    }
+                }
+            });
+        });
+    </script>
+    <style type="text/css">
+    </style>
+</head>
+
+<body style="background-color: beige;">
+    <div class="container-fluid">
+        <form action="" method="POST">
+            <div class="container">
+                <h2 style="text-align: center;">FEEDBACK FORM</h2>
+            </div>
+            <div style="background-color: beige;">
+                <div class="form-group">
+                    <label for="Name">Name</label>
+                    <input type="text" class="form-control" id="txtUsername" placeholder="Enter Username" />
+                </div>
+                <div class="form-group">
+                    <label for="Dob">Date Of Birth</label>
+                    <input type="text" class="form-control" id="txtdob" placeholder="Enter Email" />
+                    <div  class="container">
+                        <p style="font-size: small;">Note: Format is dd/mm/yyyy</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Mobilenumber">Mobile Number</label>
+                        <input type="number" class="form-control" id="txtphnno" placeholder="Enter Phone number" />
+                    </div>
+                    <label for="FEEDBACK">Feedback</label>
+                    <div class="form-group">
+                        
+                        <textarea id="FB" rows="10" cols="70"></textarea>
+                    </div>
+
+                </div>
+                <br><br><br>
+                <button type="button" class="btn btn-success" id="btnLogin" style="margin-left: 600px;">SUBMIT</button>
+                <br><br>
+        </form>
+    </div>
+</body>
+
+</html>
