@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function myf()
+            {
+                var v;
+                v=document.getElementById("a1").value;
+                if(/^[6-9][0-9]{0,9}$/.test(v)){
+                    window.alert("Indian Mobile Number");
+                }
+                else{
+                    window.alert("Not An Indian Mobile Number");
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        PHONE NUMBER: <input type="text" id="a1" placeholder="Type your phonenumber here">
+        <br>
+        <br>
+        <button type="button" onclick="myf()" >SUBMIT</button>
+
+    </body>
+</html>
