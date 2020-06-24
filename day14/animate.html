@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Animate</title>
+        <link rel="stylesheet" href="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/css/bootstrap.min.css"/>
+        <script type="text/javascript" src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/js/jquery.min.js"></script>
+        <link rel="stylesheet" href="../jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.min.css">
+        <script type="text/javascript" src="../jquery-ui-1.12.1/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <script  type="text/javascript" src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#btnClick").click(function(){
+                    $("div").animate({right:'200px',height:'450px',width:'450px', color:'black'});
+                });
+                $("#btnreset").click(function(){
+                    $("div").removeAttr('style');
+                })
+            });
+        </script>
+        <style type="text/css"> 
+            div{
+                font-family: cursive;
+                text-align: center;
+                background-color: beige;
+                color:darkblue;
+                height: 600px;
+                width: 250px;
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body  style="margin: 50px;">
+        <button type="button" class="btn btn-success" id="btnClick">Animate</button> &nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-dark" id="btnreset">Reset</button>
+        <br/><br/>
+        <div>
+            <h2>Hello</h2>
+            <p>Welcome to animations!</p>
+            <p style="margin: 20px;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        </div>
+    </body>
+</html>
