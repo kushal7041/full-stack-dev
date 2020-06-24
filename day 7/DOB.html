@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function myf() {
+            var v, v1;
+            v = document.getElementById("id").value;
+            v1 = /^[0-9]{1,2}[/][0-9]{0,2}[/][0-9]{4}$/;
+            if (v1.test(v)) {
+                var req_year = v.split("/")[2]
+                var y = new Date().getFullYear()
+                var diff = y - req_year;
+                if (diff >= 0) {
+                    if (diff >= 18) {
+                        window.alert("Date valid and Age above 18");
+                    }
+                    else {
+                        window.alert("Date valid and Age below 18");
+                    }
+                }
+                else {
+                    window.alert("Date Exceeded");
+
+                }
+            }
+            else {
+                window.alert("Date Invalid");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    Enter Date:<input type="text" id="id" />
+    <br>
+    <br>
+    <p>Date format dd/MM/yyyy should be 18+</p>
+    <br>
+    <br>
+    <button type="button" onclick="myf()">Validate</button>
+</body>
+
+</html>
