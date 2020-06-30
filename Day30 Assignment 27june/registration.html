@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration</title>
+    <script type="text/javascript" src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/js/jquery.min.js"></script>
+    <link rel="StyleSheet" href="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/css/bootstrap.min.css" />
+    <script type="text/javascript" src="../bootstrap-4.5.0-dist/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnLogin").click(function () {
+                var val1 = $("#txtUsername").val();
+                var val2 = $("#txtPassword").val();
+                var val3 = $("#txtemail").val();
+                var val4 = $("#txtphnno").val();
+                var val5 = $("#address").val();
+                
+                if (val1 == '' && val2 == ''&& val5 == '') {
+                    $('input[type="text"]').css("border", "2px solid red");
+                    $('input[type="email"]').css("border", "2px solid red");
+                    $('input[type="password"]').css("border", "2px solid red");
+                    $('input[type="tel"]').css("border", "2px solid red");
+                    $('#address').css("border", "2px solid red");
+                    window.alert('fill the Username,EmailId,MobileNumber,Password and Address');
+                }
+                else {
+                    if (/^[A-Za-z]{6,12}$/.test(val1) && /^[A-Za-z]{6,12}$/.test(val2) && /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/.test(val3) && /^[0-9]{10}$/) {
+
+                        window.alert('Validated');
+                    }
+                    else {
+                        $('input[type="text"]').css("border", "2px solid green");
+                        $('input[type="email"]').css("border", "2px solid green");
+                        $('input[type="password"]').css("border", "2px solid green");
+                        $('input[type="tel"]').css("border", "2px solid green");
+                        $('#address').css("border", "2px solid green");
+                        window.alert("Not Validated")
+                    }
+                }
+            });
+        });
+    </script>
+    <style>
+    body{
+        margin: 100px;
+        margin-left: 250px;
+        background-color: whitesmoke;
+        width: 1000px;
+        border: 15px solid black;
+        padding: 20px;
+    }
+    </style>
+</head>
+
+<body style="background-color: whitesmoke;">
+    <div class="container-fluid" >
+        <form action="" method="POST">
+            <div class="container">
+                <h2 style="text-align: center; color: teal;">REGISTRATION FORM</h2>
+            </div>
+            <div style="background-color: beige;">
+                <div class="form-group">
+                    <label for="Username">USERNAME :</label>
+                    <input type="text" class="form-control" id="txtUsername" placeholder="Enter Username" />
+                </div>
+                <div class="form-group">
+                    <label for="emailid">EMAIL ID :</label>
+                    <input type="email" class="form-control" id="txtemail" placeholder="Enter Email" />
+                </div>
+                <div class="form-group">
+                    <label for="mobilenumber">MOBILE NUMBER :</label>
+                    <input type="tel" class="form-control" id="txtphnno" placeholder="Enter Phone number" />
+                </div>
+                <div class="form-group">
+                    <label for="Password">PASSWORD :</label>
+                    <input type="password" class="form-control" id="txtPassword" placeholder="Enter Password" />
+                </div>
+                <label for="address">ADDRESS :</label>
+                <div class="form-group">
+                    
+                    <textarea id="address" rows="10" cols="70"></textarea>
+                </div>
+            </div>
+            <br><br><br>
+            <button type="button" class="btn btn-success" id="btnLogin" style="margin-left: 420px;">SUBMIT</button>
+        </form>
+    </div>
+</body>
+
+</html>
